@@ -11,13 +11,13 @@
 
 <body>
     <header>
-        <div class="mainHeader"><h1>Форма №0003-В/у</h1></div>
+        <div class="mainHeader"><h1>Форма №0003-в/у</h1></div>
     </header>
     <main>
         <div>
             <h2 class="VIO">Введите ФИО </h2>
             <div class="VIOInputs">
-                <input class="inputText" id="surnamePatient" type="text" placeholder="Фамилия">
+                <input class="inputText" required id="surnamePatient" type="text" placeholder="Фамилия">
                 <input class="inputText" id="namePatient" type="text" placeholder="Имя">
                 <input class="inputText" id="patronymicPatient" type="text" placeholder="Отчёство">
             </div>
@@ -31,9 +31,9 @@
         <div class="registrationPatient">
             <h2 class="VIO">Введите регистрационные данные</h2>
             <div class="registrationInputs">
-                <input class="inputText" id="subPatient" type="text" placeholder="Субъект РФ">
+                <input class="inputText" value="Забайкальский край" id="subPatient" type="text" placeholder="Субъект РФ">
                 <input class="inputText" id="raionPatient" type="text" placeholder="Район">
-                <input class="inputText" id="cityPatient" type="text" placeholder="Город">
+                <input class="inputText" value="Чита"id="cityPatient" type="text" placeholder="Город">
                 <input class="inputText" id="pynktPatient" type="text" placeholder="Населенный пункт" >
                 <input class="inputText" id="streetPatient" type="text" placeholder="Улица">
                 <input class="inputText" id="homePatient" type="text" placeholder="Дом">
@@ -51,6 +51,7 @@
             </div>
         </div>
     </main>
+    
     <script src="js/main.js"></script>
 </body>
 </html>

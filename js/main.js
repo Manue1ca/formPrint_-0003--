@@ -1,117 +1,138 @@
 let dateOutInput = document.querySelector('#dateOutInput')
 let outdate = new Date()
-if(!!outdate.valueOf()){
+if (!!outdate.valueOf()) {
     outYear = outdate.getFullYear()
-    outMout = outdate.getMonth()+1
+    outMout = outdate.getMonth() + 1
     outDay = outdate.getDate()
 }
-if (outMout <=10){
+if (outMout <= 10) {
     dateOutInput.value = `${outYear}-0${outMout}-${outDay}`
-}else{
+} else {
     dateOutInput.value = `${outYear}-${outMout}-${outDay}`
 }
 
 
+var form = document.querySelector("form");
+form.addEventListener("submit", function (event) {
+    for (key in form.elements) {
+        console.log(form.elements[key].value);        
+    }
+    console.log("Saving value", form.elements);
+    event.preventDefault();
+});
+
+function testAdd() {
+    form.raionPatient.value = "test"
+    form.pynktPatient.value = "test"
+    form.streetPatient.value = "test"
+    form.homePatient.value = "test"
+    form.stroeniePatient.value = "test"
+    form.korpusPatient.value = "test"
+    form.kvPatient.value = "test"
+    form.komnataPatient.value = "test"
+    form.surnamePatient.value = "test"
+    form.namePatient.value = "test"
+    form.patronymicPatient.value = "test"
+    form.datePatient.value = dateOutInput.value
+}
+
+
+
+
 function outData() {
     let surnamePatient = document.querySelector('#surnamePatient').value
-    if (surnamePatient === ''){
+    if (surnamePatient === '') {
         surnamePatient = '-'
     }
     let namePatient = document.querySelector('#namePatient').value
-    if (namePatient === ''){
+    if (namePatient === '') {
         namePatient = '-'
     }
     let patronymicPatient = document.querySelector('#patronymicPatient').value
-    if (patronymicPatient === ''){
+    if (patronymicPatient === '') {
         patronymicPatient = '-'
     }
     let datePatient = document.querySelector('#datePatient').value
-    if (datePatient === ''){
+    if (datePatient === '') {
         datePatient = '-'
     }
 
     let d = new Date(datePatient)
 
-    if ( !!d.valueOf() ) {
+    if (!!d.valueOf()) {
         day = d.getDate();
         year = d.getFullYear();
-        if (d.getMonth()+1 ===1){
+        if (d.getMonth() + 1 === 1) {
             month = 'января';
-        }else if(d.getMonth()+1 ===2){
+        } else if (d.getMonth() + 1 === 2) {
             month = 'февраля'
-        }else if(d.getMonth()+1 ===3) {
+        } else if (d.getMonth() + 1 === 3) {
             month = 'марта'
-        }else if(d.getMonth()+1 ===4) {
+        } else if (d.getMonth() + 1 === 4) {
             month = 'апреля'
         }
-        else if(d.getMonth()+1 ===5) {
+        else if (d.getMonth() + 1 === 5) {
             month = 'мая'
-        }else if(d.getMonth()+1 ===6) {
+        } else if (d.getMonth() + 1 === 6) {
             month = 'июня'
         }
-        else if(d.getMonth()+1 ===7) {
+        else if (d.getMonth() + 1 === 7) {
             month = 'июля'
-        }else if(d.getMonth()+1 ===8) {
+        } else if (d.getMonth() + 1 === 8) {
             month = 'августа'
-        }else if(d.getMonth()+1 ===9) {
+        } else if (d.getMonth() + 1 === 9) {
             month = 'сентября'
-        }else if(d.getMonth()+1 ===10) {
+        } else if (d.getMonth() + 1 === 10) {
             month = 'октября'
-        }else if(d.getMonth()+1 ===11) {
+        } else if (d.getMonth() + 1 === 11) {
             month = 'ноября'
-        }else if(d.getMonth()+1 ===12) {
+        } else if (d.getMonth() + 1 === 12) {
             month = 'декабря'
         }
-
-
-
     }
     else {
         alert('Введите дату рождения!')
     }
     let subPatient = document.querySelector('#subPatient').value
-    if (subPatient === ''){
+    if (subPatient === '') {
         subPatient = '-'
     }
     let raionPatient = document.querySelector('#raionPatient').value
-    if (raionPatient === ''){
+    if (raionPatient === '') {
         raionPatient = '-'
     }
     let cityPatient = document.querySelector('#cityPatient').value
-    if (cityPatient === ''){
+    if (cityPatient === '') {
         cityPatient = '-'
     }
     let streetPatient = document.querySelector('#streetPatient').value
-    if (streetPatient === ''){
+    if (streetPatient === '') {
         streetPatient = '-'
     }
     let homePatient = document.querySelector('#homePatient').value
-    if (homePatient === ''){
+    if (homePatient === '') {
         homePatient = '-'
     }
     let stroeniePatient = document.querySelector('#stroeniePatient').value
-    if (stroeniePatient === ''){
+    if (stroeniePatient === '') {
         stroeniePatient = '-'
     }
     let korpusPatient = document.querySelector('#korpusPatient').value
-    if (korpusPatient === ''){
+    if (korpusPatient === '') {
         korpusPatient = '-'
     }
     let kvPatient = document.querySelector('#kvPatient').value
-    if (kvPatient === ''){
+    if (kvPatient === '') {
         kvPatient = '-'
     }
     let komnataPatient = document.querySelector('#komnataPatient').value
-    if (komnataPatient === ''){
+    if (komnataPatient === '') {
         komnataPatient = '-'
     }
     let pynktPatient = document.querySelector('#pynktPatient').value
-    if (pynktPatient === ''){
+    if (pynktPatient === '') {
         pynktPatient = '-'
     }
-
-
-
 
 
     var docDefinition = {

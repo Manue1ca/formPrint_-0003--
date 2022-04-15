@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+    <script src='js/pdfmake.min.js'></script>
+    <script src='js/vfs_fonts.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="mainHeader">
+            <h1>Форма №0003-в/у</h1>
+        </div>
+    </header>
+    <main>
+        <form action="">
+            <div>
+                <h2 class="VIO">Введите ФИО </h2>
+                <div class="VIOInputs">
+                    <input class="inputText" required id="surnamePatient" type="text" placeholder="Фамилия">
+                    <input class="inputText" required id="namePatient" type="text" placeholder="Имя">
+                    <input class="inputText" required id="patronymicPatient" type="text" placeholder="Отчёство">
+                </div>
+            </div>
+            <div class="datePatient">
+                <div class="dateInputs">
+                    <h2 class="">Введите дату рождения:</h2>
+                    <input required id="datePatient" class="" type='date'>
+                </div>
+            </div>
+            <div class="registrationPatient">
+                <h2 class="VIO">Введите регистрационные данные</h2>
+                <div class="registrationInputs">
+                    <input class="inputText" required value="Забайкальский край" id="subPatient" type="text"
+                        placeholder="Субъект РФ">
+                    <input class="inputText" required id="raionPatient" type="text" placeholder="Район">
+                    <input class="inputText" required value="Чита" id="cityPatient" type="text" placeholder="Город">
+                    <input class="inputText" required id="pynktPatient" type="text" placeholder="Населенный пункт">
+                    <input class="inputText" required id="streetPatient" type="text" placeholder="Улица">
+                    <input class="inputText" required id="homePatient" type="text" placeholder="Дом">
+                    <input class="inputText" required id="stroeniePatient" type="text" placeholder="Строение">
+                    <input class="inputText" required id="korpusPatient" type="text" placeholder="Корпус">
+                    <input class="inputText" required id="kvPatient" type="text" placeholder="Квартира">
+                    <input class="inputText" required id="komnataPatient" type="text" placeholder="Комната">
+                </div>
+            </div>
+            <div class="dateOut">
+                <div class="dateInputs">
+                    <h2>Дата выдачи:</h2>
+                    <input id="dateOutInput" type='date' style="height: 32px">
+                    <button onclick="outData()">Форма для печати</button>
+                    <button type="submit">Тест</button>
+
+                </div>
+            </div>
+        </form>
+        <button onclick="testAdd()">Заполнить</button>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
